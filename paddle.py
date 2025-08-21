@@ -1,6 +1,6 @@
-import turtle
+from turtle import Turtle
 
-class Paddle(turtle.Turtle):
+class Paddle(Turtle):
     def __init__(self, position): # define the paddle
         super().__init__() # initialize the turtle
         self.shape("square")
