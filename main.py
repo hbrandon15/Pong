@@ -31,6 +31,7 @@ while game_is_on:
 	time.sleep(0.1)
 	screen.update()
 	ball.move()
+	ball.wall_bounce()
 
 
 screen.exitonclick() # Close the window on click

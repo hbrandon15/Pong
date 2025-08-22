@@ -16,10 +16,15 @@ class Ball(Turtle):
 		self.goto(new_x, new_y)
 
 	def bounce_y(self):
-		self.y_move *= -1
+		self.y_move *= -1 # reverse y direction
 
 	def bounce_x(self):
-		self.x_move *= -1
+		self.x_move *= -1 # reverse x direction
+
 	def reset_position(self):
 		self.goto(0, 0)
 		self.bounce_x()
+
+	def wall_bounce(self): 
+		if self.ycor() > 280 or self.ycor() < -280:
+			self.bounce_y()
