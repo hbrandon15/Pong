@@ -31,7 +31,14 @@ while game_is_on:
 	time.sleep(0.1)
 	screen.update()
 	ball.move()
+
+	# detect collision with wall
 	ball.wall_bounce()
+
+	# detect collision with paddles
+	if ball.distance(r_paddle) < 50 and ball.xcor() > 340 or ball.distance(l_paddle) < 50 and ball.xcor() < -340:
+		ball.bounce_x()
+
 
 
 screen.exitonclick() # Close the window on click
