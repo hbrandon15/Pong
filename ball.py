@@ -23,7 +23,7 @@ class Ball(Turtle):
 
 	def reset_position(self):
 		self.goto(0, 0)
-		self.bounce_x()
+		self.bounce_x() # send the ball in the opposite direction
 
 	def wall_bounce(self): 
 		if self.ycor() > 280 or self.ycor() < -280:
