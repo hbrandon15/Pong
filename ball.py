@@ -23,8 +23,17 @@ class Ball(Turtle):
 
 	def reset_position(self):
 		self.goto(0, 0)
+		self.reset_speed()
 		self.bounce_x() # send the ball in the opposite direction
 
 	def wall_bounce(self): 
 		if self.ycor() > 280 or self.ycor() < -280:
 			self.bounce_y()
+
+	def increase_speed(self):
+		self.x_move *= 1.1
+		self.y_move *= 1.1
+
+	def reset_speed(self):
+		self.x_move = 10
+		self.y_move = 10
